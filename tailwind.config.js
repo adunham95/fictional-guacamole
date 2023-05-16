@@ -13,7 +13,8 @@ module.exports = {
           lighter: '#67abff',
           light: "#348fff",
           DEFAULT: '#0173ff',
-          dark: '#005ccd'
+          dark: '#005ccd',
+          accent: '#9F50F3'
         }
       },
       spacing: {

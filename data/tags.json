@@ -10,6 +10,6 @@
     {"name":"CSS","checked":false,"color":"#1572B6", "icon": "css3"},
     {"name":"HTML","checked":false,"color":"#E34F26", "icon": "html5"},
     {"name":"GitHub","checked":false,"color":"#181717", "icon": "github"},
-    {"name":"DevLog","checked":false,"color":"#181717"},
-    {"name":"HireMate","checked":false,"color":"#181717"}
+    {"name":"DevLog","checked":false,"color":"#22C197"},
+    {"name":"HireMate","checked":false,"color":"#ff5722"}
 ]

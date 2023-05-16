@@ -3,6 +3,7 @@ import DateFormatter from './date-formatter'
 import CoverImage from './cover-image'
 import Link from 'next/link'
 import type Author from '../interfaces/author'
+import { Tag } from './tag'
 
 type Props = {
   title: string
@@ -11,6 +12,7 @@ type Props = {
   excerpt: string
   author: Author
   slug: string
+  tags: string[]
 }
 
 const HeroPost = ({
@@ -20,6 +22,7 @@ const HeroPost = ({
   excerpt,
   author,
   slug,
+  tags = [], 
 }: Props) => {
   return (
     <section>
@@ -37,6 +40,9 @@ const HeroPost = ({
               {title}
             </Link>
           </h3>
+          <div>
+          {tags.map(t => <Tag name={t} />)}
+          </div>
           <div className="mb-4 md:mb-0 text-lg">
             <DateFormatter dateString={date} />
           </div>

@@ -8,10 +8,8 @@ interface ITagProp{
 
 export const Tag = ({name}: ITagProp) => {
     const defaultStyles = "text-xs pt-0.5 px-1 pb-1 mr-1 rounded"
-    console.log({tags, technology})
     const allTags = [...tags, ...technology]
     const selectedTag = allTags.find(t => t.name === name)
-    console.log({selectedTag})
     if(!selectedTag){
         return(
             <span>{capitalizeFirstLetter(name)}</span>
@@ -23,8 +21,6 @@ export const Tag = ({name}: ITagProp) => {
             
         </span>
     )
-
-    return <>{name}</>
 }
 
 function pickTextColorBasedOnBgColorSimple(bgColor, lightColor, darkColor) {

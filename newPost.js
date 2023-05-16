@@ -35,7 +35,7 @@ function buildPost(answers){
 `---
 draft: true
 title: "${answers.name}"
-coverImage: "/assets/blog/preview/cover.jpg"
+coverImage: "/assets/blog/placeholder-cover.jg
 date: "${new Date().toDateString()}"
 category: ${answers.category}
 tags:

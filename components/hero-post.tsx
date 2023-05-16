@@ -41,7 +41,7 @@ const HeroPost = ({
             </Link>
           </h3>
           <div>
-          {tags.map(t => <Tag name={t} />)}
+          {tags.map(t => <Tag key={t} name={t} />)}
           </div>
           <div className="mb-4 md:mb-0 text-lg">
             <DateFormatter dateString={date} />

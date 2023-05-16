@@ -39,7 +39,7 @@ const PostPreview = ({
         </Link>
       </h3>
       <div>
-          {tags.map( t => <Tag name={t}/>)}
+          {tags.map( t => <Tag key={t} name={t}/>)}
         </div>
       <div className="text-lg mb-4">
         <DateFormatter dateString={date} />

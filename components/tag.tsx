@@ -7,7 +7,7 @@ interface ITagProp{
 }
 
 export const Tag = ({name}: ITagProp) => {
-    const defaultStyles = "text-xs pt-0.5 px-1 pb-1 mr-1 rounded"
+    const defaultStyles = "text-xs pt-0.5 px-1 pb-1 mr-1 rounded whitespace-nowrap"
     const allTags = [...tags, ...technology]
     const selectedTag = allTags.find(t => t.name === name)
     if(!selectedTag){

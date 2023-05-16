@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import Post from '../interfaces/post'
+import Image from 'next/image'
 
 type Props = {
   allPosts: Post[]
@@ -20,6 +21,14 @@ export default function Index({ allPosts }: Props) {
         <Head>
           <title>Adrian Dunham Blog</title>
         </Head>
+        <div className=' bg-primary flex justify-center py-3 '>
+        <Image
+      src={'/assets/logoWide.svg'}
+      alt={`Logo`}
+      width={480}
+      height={100}
+    />
+    </div>
         <Container>
           <Intro />
           {heroPost && (

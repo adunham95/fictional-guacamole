@@ -10,6 +10,7 @@ import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
+import { PAGE_NAME } from '../../lib/constants'
 
 type Props = {
   post: PostType
@@ -33,7 +34,7 @@ export default function Post({ post, morePosts, preview }: Props) {
           <>
             <article className="mb-32">
               <Head>
-                <title>{title}</title>
+                <title>{title} | {PAGE_NAME}</title>
                 {/* <meta property="og:image" content={post.ogImage.url} /> */}
               </Head>
               <PostHeader

@@ -22,7 +22,7 @@ export default function Index({ allPosts }: Props) {
         <Head>
           <title>{PAGE_NAME}</title>
         </Head>
-        <div className=' bg-primary flex justify-center py-3 '>
+        <div className=' bg-primary flex justify-center py-3 px-2'>
         <Image
       src={'/assets/logoWide.svg'}
       alt={`Logo`}

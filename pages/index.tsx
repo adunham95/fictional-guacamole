@@ -24,8 +24,8 @@ export default function Index({ allPosts }: Props) {
           <title>{PAGE_NAME}</title>
         </Head>
         <Nav />
+        <Intro />
         <Container>
-          <Intro />
           {heroPost && (
             <HeroPost
               title={heroPost.title}

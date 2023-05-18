@@ -1,35 +1,29 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import Post from '../interfaces/post'
-import Image from 'next/image'
-import { PAGE_NAME } from '../lib/constants'
+import Container from '../components/container';
+import MoreStories from '../components/more-stories';
+import HeroPost from '../components/hero-post';
+import Intro from '../components/intro';
+import Layout from '../components/layout';
+import { getAllPosts } from '../lib/api';
+import Head from 'next/head';
+import Post from '../interfaces/post';
+import Image from 'next/image';
+import { PAGE_NAME } from '../lib/constants';
+import { Nav } from '../components/nav';
 
 type Props = {
-  allPosts: Post[]
-}
+  allPosts: Post[];
+};
 
 export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  const heroPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
   return (
     <>
       <Layout>
         <Head>
           <title>{PAGE_NAME}</title>
         </Head>
-        <div className=' bg-primary flex justify-center py-3 px-2'>
-        <Image
-      src={'/assets/logoWide.svg'}
-      alt={`Logo`}
-      width={480}
-      height={100}
-    />
-    </div>
+        <Nav />
         <Container>
           <Intro />
           {heroPost && (
@@ -47,7 +41,7 @@ export default function Index({ allPosts }: Props) {
         </Container>
       </Layout>
     </>
-  )
+  );
 }
 
 export const getStaticProps = async () => {
@@ -59,10 +53,10 @@ export const getStaticProps = async () => {
     'coverImage',
     'excerpt',
     'tags',
-    'draft'
-  ])
+    'draft',
+  ]);
 
   return {
     props: { allPosts },
-  }
-}
+  };
+};
